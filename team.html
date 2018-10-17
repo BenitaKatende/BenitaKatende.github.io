@@ -42,6 +42,10 @@
 
         }
 
+        .teamphone {display: none;
+
+        }
+
       }
   @media only screen and (max-width: 800px){
 
@@ -73,8 +77,52 @@
 
         }
 
+        .row2 {display: none;
+
+        }
+
 
   }
+
+  /* @group Blink */
+.blink {
+	-webkit-animation: blink .75s linear infinite;
+	-moz-animation: blink .75s linear infinite;
+	-ms-animation: blink .75s linear infinite;
+	-o-animation: blink .75s linear infinite;
+	 animation: blink .75s linear infinite;
+}
+@-webkit-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-moz-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-ms-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-o-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+/* @end */
 
   .mycontainer:nth-child(odd) {background-color: #d9d9d9;}
   </style>
@@ -94,11 +142,10 @@
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="#vision">Vison</a></li>
-            <li><a href="#mission">Mission</a></li>
             <li><a href="team.html">Equipe</a></li>
             <li><a href="#actions">Actions</a></li>
             <li><a href="#partenaire">Devenir Partenaire</a></li>
+            <li><a href="#partenaire">Devenir B&eacute;n&eacute;vole</a></li>
             <li><a href="mailto:info@nunatu.org">&#9993 info@nunatu.org</a></li>
           </ul>
         </div>
@@ -108,16 +155,11 @@
   <div id="content">
     <div class="landing" style="position:relative;text-align:center;color:white;">
       <picture>
-      <source media="(max-width:799px)" srcset="handsclose.jpeg">
-      <source media="(min-width:800px)" srcset="hands.jpeg">
-        <img src="hands.jpeg" style="display: block;width:100%;height:600px;margin-left:auto;margin-right:auto;margin-top:-20px;">
+      <source media="(max-width:799px)" srcset="pfffc.jpeg">
+      <source media="(min-width:800px)" srcset="pfff.jpeg">
+        <img src="pfff.jpeg" style="display: block;width:100%;height:500px;margin-left:auto;margin-right:auto;margin-top:-20px;">
       </picture>
-      <img src="samsung.png" style="max-width:100%;height:180px;position: absolute;top: 30%;left: 50%;transform: translate(-50%, -50%);">
-      <p style="position: absolute;top: 70%;left: 50%;transform: translate(-50%, -50%);background: rgb(0, 0, 0);background: rgba(0, 0, 0, 0.5);color: #f1f1f1;padding: 20px;">
-      Nous sommes une <strong style="color:green;">initiative priv&eacute;e</strong> impuls&eacute;e par la compassion
-      pour les personnes vivant au quotidien une <strong style="color:green;">pr&eacute;carit&eacute;</strong> qui ne
-      leur permet pas de r&eacute;pondre &aacute; leurs <strong style="color:green;">besoins humains</strong> les plus
-      &eacute;l&eacute;mentaires (physiques, &eacute;conomiques, civils)...</p>
+      <img src="samsung.png" style="max-width:100%;height:160px;position: absolute;top: 32%;left: 50%;transform: translate(-50%, -50%);">
     </div>
     <div class="container">
     <h2 style="text-align:center;">Notre &Eacute;quipe</h2>
@@ -137,6 +179,7 @@
     &eacute;coles de devoir, Nadine est passionn&eacute;e par le partage des valeurs et exp&eacute;riences de vie transformatrices.</p>
     </div>
     <br>
+    <div class="teamphone">
     <p><span style="border: 5px solid green;background-color:green;color:white;margin: 0 auto;display:table;">NICOLE MUTETA</span></p>
     <p style="text-align:center;font-weight:bold;">Docteur en M&eacute;decine. Sp&eacute;cialiste en M&eacute;decine Aigue</p>
     <img src="Nicole.jpg" style="display:block;max-width:100%;height:150px;margin-left:auto;margin-right:auto;">
@@ -148,9 +191,41 @@
     <br>
     <br>
     <p><span style="border: 5px solid green;background-color:green;color:white;margin: 0 auto;display:table;">LES B&Eacute;N&Eacute;VOLES</span></p>
-    <p style="text-align:center;font-weight:bold">Des b&eacute;n&eacute;voles travaillent avec cette &eacute;quipe
+    <p style="text-align:center;font-weight:bold;">Des b&eacute;n&eacute;voles travaillent avec cette &eacute;quipe
     &agrave; la r&eacute;alisation de la mission de NUNATU</p>
+    <div class="blink">
+    <p><span style="border: 3px solid black; background-color:black;color:white;margin: 0 auto;display:table;">Je veux &ecirc;tre b&eacute;n&eacute;vole</span></p>
+    </div>
+    </div>
+    <div class="row2" style="margin-bottom:220px;">
+      <div class="col-sm-4" style="background-color:white;">
+        <p><span style="border: 5px solid green;background-color:green;color:white;margin: 0 auto;display:table;">NICOLE MUTETA</span></p>
+        <p style="text-align:center;font-weight:bold;">Docteur en M&eacute;decine. Sp&eacute;cialiste en M&eacute;decine Aigue</p>
+        <img src="Nicole.jpg" style="display:block;max-width:100%;height:150px;margin-left:auto;margin-right:auto;">
+        <br>
+        <br>
+      </div>
+      <div class="col-sm-4" style="background-color:white;">
+        <p><span style="border: 5px solid green;background-color:green;color:white;margin: 0 auto;display:table;">PATRICIA KANKU</span></p>
+        <p style="text-align:center;font-weight:bold;">Fondatrice et Directrice de PDK Business Consulting</p>
+        <img src="Kanku.jpg" style="display:block;max-width:100%;height:150px;margin-left:auto;margin-right:auto;">
+        <br>
+        <br>
+      </div>
+      <div class="col-sm-4" style="background-color:white;">
+        <p><span style="border: 5px solid green;background-color:green;color:white;margin: 0 auto;display:table;">LES B&Eacute;N&Eacute;VOLES</span></p>
+        <p style="text-align:center;font-weight:bold;">Des b&eacute;n&eacute;voles travaillent avec cette &eacute;quipe
+        &agrave; la r&eacute;alisation de la mission de NUNATU</p>
+        <div class="blink">
+        <p><span style="border: 3px solid black; background-color:black;color:white;margin: 0 auto;display:table;">Je veux &ecirc;tre b&eacute;n&eacute;vole</span></p>
+        </div>
+    </div>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    </div>
     <div id="footer" style="background-color:#808080;">
       <div class="container">
   	     <div class="row-fluid">
