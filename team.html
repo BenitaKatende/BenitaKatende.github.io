@@ -22,6 +22,10 @@
 
         }
 
+        .container p {font-size: 18px;
+
+        }
+
         .mycontainer img {width:50px;height: 50px;
 
         }
@@ -43,6 +47,14 @@
         }
 
         .teamphone {display: none;
+
+        }
+
+        #more {display: none;
+
+        }
+
+        .row2 p {font-size: 18px;
 
         }
 
@@ -81,9 +93,18 @@
 
         }
 
+        #more {display: none;
+
+        }
+
+        .landing h2 {width: 300px;margin-top: -20px;
+
+        }
+
 
   }
 
+  .mycontainer:nth-child(odd) {background-color: #d9d9d9;}
   /* @group Blink */
 .blink {
 	-webkit-animation: blink .75s linear infinite;
@@ -124,8 +145,25 @@
 }
 /* @end */
 
-  .mycontainer:nth-child(odd) {background-color: #d9d9d9;}
   </style>
+
+<script>
+function myFunction(){
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "En savoir plus";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Moins";
+    moreText.style.display = "inline";
+  }
+}
+</script>
 </head>
 <body>
   <div id="header">
@@ -143,9 +181,9 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="index.html">Home</a></li>
             <li><a href="team.html">Equipe</a></li>
-            <li><a href="#actions">Actions</a></li>
+            <li><a href="actions.html">Actions</a></li>
             <li><a href="#partenaire">Devenir Partenaire</a></li>
-            <li><a href="#partenaire">Devenir B&eacute;n&eacute;vole</a></li>
+            <li><a href="bene.html">Devenir B&eacute;n&eacute;vole</a></li>
             <li><a href="mailto:info@nunatu.org">&#9993 info@nunatu.org</a></li>
           </ul>
         </div>
@@ -160,9 +198,11 @@
         <img src="pfff.jpeg" style="display: block;width:100%;height:500px;margin-left:auto;margin-right:auto;margin-top:-20px;">
       </picture>
       <img src="samsung.png" style="max-width:100%;height:150px;position: absolute;top: 35%;left: 50%;transform: translate(-50%, -50%);">
+      <img src="samsung.png" style="max-width:100%;height:150px;position: absolute;top: 35%;left: 50%;transform: translate(-50%, -50%);">
+      <h2 style="position: absolute;top: 85%;left: 50%;transform: translate(-50%, -50%);background: rgb(0, 0, 0);background: rgba(0, 0, 0, 0.5);color: #f1f1f1;padding: 20px;">
+      Notre &Eacute;quipe</h2>
     </div>
     <div class="container">
-    <h2 style="text-align:center;">Notre &Eacute;quipe</h2>
     <br>
     <p><span style="border: 5px solid green;background-color:green;color:white;margin: 0 auto;display:table;">NADINE MUTETA</span></p>
     <p style="text-align:center;font-weight:bold;">Fondatrice et Pre&eacute;sidente de NUNATU Asbl</p>
@@ -170,13 +210,16 @@
     <br>
     <p style="text-align:center;">&Eacute;conomiste, (Ma&icirc;trise en Sciences &Eacute;conomiques et Sociales, Facult&eacute;s Universitaires Notre
     Dame de la Paix, Namur, Belgique). Nadine a &eacute;volu&eacute; dans le monde associatif en Belgique
-    et en RDC (Lubumbashi) pour le compte de diverses ONG, essentiellement dans le domaine de l’acc&egrave;s aux services sociaux
+    et en RDC (Lubumbashi) pour le compte de diverses ONG,<span id="dots">...</span><span id="more"> essentiellement dans le domaine de l’acc&egrave;s aux services sociaux
     de base et la r&eacute;duction de la vuln&eacute;rabilit&eacute;; en pr&ocirc;nant l’application de l’approche participative
     et de la dynamique de concertation ainsi que la r&eacute;insertion socio-&eacute;conomique des groupes vuln&eacute;rables
     (‘Dynamique pour la motivation’, ‘Congo réveil’, ‘OCIV’, ‘FFTB’, ). Elle a travaill&eacute; sur des strat&eacute;gies de
     r&eacute;duction de la pauvret&eacute; &agrave; travers la valorisation et la canalisation des transferts financiers des
     migrants au profit d'activit&eacute;s g&eacute;n&eacute;ratrices de revenu. B&eacute;n&eacute;vole dans diff&eacute;rentes
-    &eacute;coles de devoir, Nadine est passionn&eacute;e par le partage des valeurs et exp&eacute;riences de vie transformatrices.</p>
+    &eacute;coles de devoir, Nadine est passionn&eacute;e par le partage des valeurs et exp&eacute;riences de vie transformatrices.</span></p>
+    <button onclick="myFunction()" id="myBtn" style="margin: 0 auto;display:table;">En savoir plus</button>
+    <br>
+    <br>
     </div>
     <br>
     <div class="teamphone">
@@ -193,6 +236,7 @@
     <p><span style="border: 5px solid green;background-color:green;color:white;margin: 0 auto;display:table;">LES B&Eacute;N&Eacute;VOLES</span></p>
     <p style="text-align:center;font-weight:bold;">Des b&eacute;n&eacute;voles travaillent avec cette &eacute;quipe
     &agrave; la r&eacute;alisation de la mission de NUNATU</p>
+    <img src="bene.png" style="display:block;max-width:100%;height:150px;margin-left:auto;margin-right:auto;">
     <div class="blink">
     <p><span style="border: 3px solid black; background-color:black;color:white;margin: 0 auto;display:table;">Je veux &ecirc;tre b&eacute;n&eacute;vole</span></p>
     </div>
@@ -214,8 +258,9 @@
       </div>
       <div class="col-sm-4" style="background-color:white;">
         <p><span style="border: 5px solid green;background-color:green;color:white;margin: 0 auto;display:table;">LES B&Eacute;N&Eacute;VOLES</span></p>
-        <p style="text-align:center;font-weight:bold;">Des b&eacute;n&eacute;voles travaillent avec cette &eacute;quipe
+        <p style="text-align:center;font-weight:bold;">Ils travaillent avec cette &eacute;quipe
         &agrave; la r&eacute;alisation de la mission de NUNATU</p>
+        <img src="bene.png" style="display:block;max-width:100%;height:150px;margin-left:auto;margin-right:auto;">
         <div class="blink">
         <p><span style="border: 3px solid black; background-color:black;color:white;margin: 0 auto;display:table;">Je veux &ecirc;tre b&eacute;n&eacute;vole</span></p>
         </div>
