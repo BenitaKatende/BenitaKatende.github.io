@@ -42,6 +42,10 @@
 
         }
 
+        #more {display: none;
+
+        }
+
       }
   @media only screen and (max-width: 800px){
 
@@ -77,10 +81,33 @@
 
         }
 
+        #more {display: none;
+
+        }
+
 
   }
   .mycontainer:nth-child(odd) {background-color: #d9d9d9;}
   </style>
+
+  <script>
+  function myFunction(){
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "En savoir plus";
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Moins";
+      moreText.style.display = "inline";
+    }
+  }
+  </script>
+
 </head>
 <body>
   <div id="header">
@@ -99,7 +126,6 @@
             <li class="active"><a href="index.html">Home</a></li>
             <li><a href="team.html">Equipe</a></li>
             <li><a href="actions.html">Actions</a></li>
-            <li><a href="#partenaire">Devenir Partenaire</a></li>
             <li><a href="bene.html">Devenir B&eacute;n&eacute;vole</a></li>
             <li><a href="mailto:info@nunatu.org">&#9993 info@nunatu.org</a></li>
           </ul>
@@ -140,6 +166,21 @@
         <p>Accompagner chaque personne vuln&eacute;rable &aacute; (re)d&eacute;couvrir son potentiel et sa dignit&eacute;. </p>
         <img src="numbertree.jpg" style="width:30px;height:30px;margin-left:140px;">
         <p>Transformer chaque individu en personne ressource et en acteur de développement de sa soci&eacute;t&eacute;. </p>
+        <br>
+      </div>
+    </div>
+    <div class="mycontainer">
+      <div class="max" style="width:1000px;margin:0 auto;">
+        <br>
+        <h2 style="text-align:center;">Notre Partenaire Principal</h2>
+        <img src="Doc.gif" style="float:right;width:130px;height:130px;margin-top:-10px;">
+        <p style="text-align:center;">La fondation FAFEDE (Fondation Africaine pour l'Entrepreneuriat et le D&eacute;veloppement &Eacute;conomique) initi&eacute;e par le Dr
+          Samuel Mathey. Il est le p&egrave;re du concept EZF (Entreprendre &agrave; partir de Z&eacute;ro Franc) ou comment d&eacute;marrer une entreprise
+          sans apport de financement ext&eacute;rieur<span id="dots">.</span></p>
+        <p><span id="more">Samuel MATHEY est professeur d’économie, de stratégie et de management,
+        spécialisé dans les questions de dette, de financement et d’entrepreneuriat. Il est titulaire d’un doctorat américain en économie (Ph.D.) et d’un MBA des universités
+        Delaware et d’Ohio State, ainsi que d’une maîtrise en économie monétaire et économétrie.</span></p>
+          <button onclick="myFunction()" id="myBtn" style="margin: 0 auto;display:table;">En savoir plus</button>
         <br>
       </div>
     </div>
