@@ -46,6 +46,10 @@
 
         }
 
+        .hideme {opacity:0;
+
+        }
+
       }
   @media only screen and (max-width: 800px){
 
@@ -85,6 +89,10 @@
 
         }
 
+        .hideme {opacity:0;
+
+        }
+
 
   }
   .mycontainer:nth-child(odd) {background-color: #d9d9d9;}
@@ -106,6 +114,34 @@
       moreText.style.display = "inline";
     }
   }
+
+  $(function(){  // $(document).ready shorthand
+  $('.monster').fadeIn('slow');
+});
+
+$(document).ready(function() {
+
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+
+                $(this).animate({'opacity':'1'},1000);
+
+            }
+
+        });
+
+    });
+
+});
   </script>
 
 </head>
@@ -159,12 +195,12 @@
     <div class="mycontainer">
       <div class="max" style="width:1000px;margin: 0 auto;">
         <h2 id="mission" style="text-align:center;margin-top:30px;padding-top:20px;">Notre Mission</h2>
-        <img src="number1.jpg" style="width:30px;height:30px;margin-left:140px;">
+        <img class="hideme" src="number1.jpg" style="width:30px;height:30px;margin-left:140px;">
         <p>Stimuler le d&eacute;veloppement personnel et la
         r&eacute;lisation de soi. </p>
-        <img src="numbertwo.jpg" style="width:30px;height:30px;margin-left:140px;">
+        <img class="hideme" src="numbertwo.jpg" style="width:30px;height:30px;margin-left:140px;">
         <p>Accompagner chaque personne vuln&eacute;rable &agrave; (re)d&eacute;couvrir son potentiel et sa dignit&eacute;. </p>
-        <img src="numbertree.jpg" style="width:30px;height:30px;margin-left:140px;">
+        <img class="hideme" src="numbertree.jpg" style="width:30px;height:30px;margin-left:140px;">
         <p>Transformer chaque individu en personne ressource et en acteur de développement de sa soci&eacute;t&eacute;. </p>
         <br>
       </div>
