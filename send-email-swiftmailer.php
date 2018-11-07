@@ -85,8 +85,8 @@ if(isset($_POST['email'])) {
     try
     {
         $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
-            ->setUsername('')
-            ->setPassword('')
+            ->setUsername('benitakatende@gmail.com')
+            ->setPassword('benitakatende@gmail.com')
         ;
 
         $mailer = Swift_Mailer::newInstance($transport);
